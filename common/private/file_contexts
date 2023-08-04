@@ -1,0 +1,3 @@
+# IMS
+/system/bin/emcomd                              u:object_r:emcomd_exec:s0
+
