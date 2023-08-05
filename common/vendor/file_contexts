@@ -50,8 +50,8 @@
 # Otherdevices
 /vendor/bin/hw/vendor\.huawei\.hardware\.otherdevices@1\.0-service u:object_r:vendor_hal_hisi_otherdevices_default_exec:s0
 
-# oeminfo
-/vendor/bin/oeminfo_nvm_server                  u:object_r:oeminfo_nvm_exec:s0
+# Oeminfo
+/vendor/bin/oeminfo_nvm_server u:object_r:oeminfo_nvm_exec:s0
 
 # Perf
 /vendor/bin/hw/vendor\.huawei\.hardware\.perfgenius@1\.0-service u:object_r:vendor_hal_hisi_perf_default_exec:s0
