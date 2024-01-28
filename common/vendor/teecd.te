@@ -1,0 +1,16 @@
+type teecd, domain;
+type teecd_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(teecd)
+domain_auto_trans(init, teecd_exec, teecd)
+
+type teecd_auth, domain, coredomain;
+type teecd_auth_exec, exec_type, file_type, system_file_type;
+init_daemon_domain(teecd_auth)
+allow init teecd_auth:process transition;
+domain_auto_trans(init, teecd_auth_exec, teecd_auth)
+
+type teelogcat, domain, coredomain;
+type teelogcat_exec, exec_type, file_type, system_file_type;
+init_daemon_domain(teelogcat)
+allow init teelogcat:process transition;
+domain_auto_trans(init, teelogcat_exec, teelogcat)

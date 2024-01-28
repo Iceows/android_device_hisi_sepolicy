@@ -86,8 +86,14 @@
 
 # TEE
 /sec_storage(/.*)?                              u:object_r:teecd_data_file:s0
-/vendor/bin/system_teecd                        u:object_r:vendor_hisi_teecd_exec:s0
-/vendor/bin/teecd                               u:object_r:vendor_hisi_teecd_exec:s0
+/vendor/bin/system_teecd                        u:object_r:tee_exec:s0
+/vendor/bin/teecd                               u:object_r:tee_exec:s0
+/vendor/bin/tlogcat                             u:object_r:teelogcat_exec:s0
+/system/bin/tee_auth_daemon                     u:object_r:teecd_auth_exec:s0
+
+/sys/kernel/tui/c_state		         u:object_r:sysfs:s0
+/dev/tc_ns_client		                 u:object_r:teecd_device:s0
+
 
 # Touchscreen
 /vendor/bin/hw/vendor\.huawei\.hardware\.tp@1\.0-service u:object_r:vendor_hal_hisi_touchscreen_default_exec:s0
