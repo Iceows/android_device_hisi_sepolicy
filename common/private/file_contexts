@@ -3,3 +3,6 @@
 
 # TEE auth daemon
 /system/bin/tee_auth_daemon                     u:object_r:teecd_auth_exec:s0
+
+# folio daemon
+/system/bin/folio_daemon                        u:object_r:folio_daemon_exec:s0
