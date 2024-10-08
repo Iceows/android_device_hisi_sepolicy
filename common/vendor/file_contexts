@@ -83,11 +83,11 @@
 /mnt/modem/modem_secure(/.*)?                   u:object_r:modem_file:s0
 /splash2(/.*)?                                  u:object_r:splashtwo_file:s0
 /vendor/modem/modem_fw(/.*)?                    u:object_r:modem_vendor_file:s0
-/cust(/.*)?			                 u:object_r:cust_file:s0
-/version(/.*)?			                 u:object_r:version_file:s0
-/data/sec_storage_data(/.*)?	                 u:object_r:teecd_data_file:s0
-/data/sec_storage_data_users(/.*)?	         u:object_r:teecd_data_file_system:s0
-
+/cust(/.*)?			                u:object_r:cust_file:s0
+/version(/.*)?			                u:object_r:version_file:s0
+/data/sec_storage_data(/.*)?	                u:object_r:teecd_data_file:s0
+/data/sec_storage_data_users(/.*)?	        u:object_r:teecd_data_file_system:s0
+/hw_odm(/.*)?                                   u:object_r:hwodm_file:s0
 
 # TEE
 /sec_storage(/.*)?                              u:object_r:teecd_data_file:s0
