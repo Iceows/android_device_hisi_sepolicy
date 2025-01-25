@@ -1,0 +1,3 @@
+# HwBinder IPC from client to server, and callbacks
+binder_call(vendor_hal_hisi_wifi_client, vendor_hal_hisi_wifi_server)
+binder_call(vendor_hal_hisi_wifi_server, vendor_hal_hisi_wifi_client)

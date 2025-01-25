@@ -10,3 +10,4 @@ vendor_hal_attribute(hisi_touchscreen);
 vendor_hal_attribute(hisi_gnss);
 vendor_hal_attribute(hisi_sensors);
 vendor_hal_attribute(hisi_vibrator);
+vendor_hal_attribute(hisi_wifi);
