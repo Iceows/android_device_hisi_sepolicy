@@ -128,6 +128,10 @@
 
 # Wifi
 /vendor/bin/mac_addr_normalization              u:object_r:vendor_hisi_wifi_exec:s0
+/vendor/bin/hostapd_hisi			  u:object_r:vendor_hisi_wifi_hostapd_exec:s0
+/vendor/bin/wpa_supplicant_hisi		  u:object_r:vendor_hisi_wifi_supplicant_exec:s0
+
+/vendor/bin/hw/vendor\.huawei\.hardware\.wifi@1\.1-service u:object_r:vendor_hal_hisi_wifi_default_exec:s0
 
 # Hisi hals (misc)
 /vendor/bin/hw/vendor\.huawei\.hardware\.hivrar@1\.0-service u:object_r:vendor_hal_hisi_misc_default_exec:s0
