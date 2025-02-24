@@ -12,5 +12,8 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     $(SEPOLICY_PATH)/common/vendor \
     $(SEPOLICY_PATH)/lineage/vendor
 
+# Not really TOP !! - must change it
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # SELinux permissive/enforcing
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
