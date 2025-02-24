@@ -1,0 +1,2 @@
+allow zygote pmsg_device:file { open write };
+allow zygote vendor_file:file { read open getattr execute };
