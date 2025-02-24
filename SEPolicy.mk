@@ -12,5 +12,5 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     $(SEPOLICY_PATH)/common/vendor \
     $(SEPOLICY_PATH)/lineage/vendor
 
-# tmp
+# SELinux permissive/enforcing
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
