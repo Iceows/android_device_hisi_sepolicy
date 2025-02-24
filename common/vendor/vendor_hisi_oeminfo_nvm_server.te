@@ -1,8 +1,0 @@
-type oeminfo_nvm, domain;
-type oeminfo_nvm_exec, exec_type, vendor_file_type, file_type;
-
-init_daemon_domain(oeminfo_nvm)
-
-allow init oeminfo_nvm:process transition;
-
-domain_auto_trans(init, oeminfo_nvm_exec, oeminfo_nvm)

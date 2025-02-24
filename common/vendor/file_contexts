@@ -63,8 +63,11 @@
 /vendor/bin/hw/vendor\.huawei\.hardware\.otherdevices@1\.0-service u:object_r:vendor_hal_hisi_otherdevices_default_exec:s0
 
 # Oeminfo
-/vendor/bin/oeminfo_nvm_server u:object_r:oeminfo_nvm_exec:s0
-/vendor/bin/hisecd		u:object_r:oeminfo_nvm_exec:s0
+/vendor/bin/oeminfo_nvm_server                           u:object_r:oeminfo_nvm_exec:s0
+/vendor/bin/hisecd		                         u:object_r:oeminfo_nvm_exec:s0
+/dev/block/platform/hi_mci.0/by-name/oeminfo		 u:object_r:oeminfo_partition_device:s0
+/dev/socket/oeminfo_nvm					 u:object_r:oeminfo_socket:s0
+/dev/oinv						 u:object_r:oeminfo_device:s0
 
 # Perf
 /vendor/bin/hw/vendor\.huawei\.hardware\.perfgenius@1\.0-service u:object_r:vendor_hal_hisi_perf_default_exec:s0

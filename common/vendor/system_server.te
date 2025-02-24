@@ -1,0 +1,4 @@
+allow system_server oeminfo_socket:sock_file write;
+allow system_server oeminfo_nvm:unix_stream_socket connectto; 
+allow system_server oeminfo_device:dir { search write remove_name };
+allow system_server oeminfo_device:file { open read getattr unlink };

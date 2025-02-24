@@ -1,0 +1,46 @@
+type oeminfo_nvm, domain;
+type oeminfo_nvm_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(oeminfo_nvm)
+
+allow init oeminfo_nvm:process transition;
+
+domain_auto_trans(init, oeminfo_nvm_exec, oeminfo_nvm)
+
+type oeminfo_device, dev_type;
+type oeminfo_socket, file_type;
+
+type_transition oeminfo_nvm socket_device:sock_file oeminfo_socket;
+type_transition oeminfo_nvm device:{ file dir } oeminfo_device;
+init_daemon_domain(oeminfo_nvm)
+
+allow oeminfo_nvm oeminfo_device:blk_file rw_file_perms;
+allow oeminfo_nvm self:capability { chown fowner fsetid };
+allow oeminfo_nvm block_device:dir search;
+allow oeminfo_nvm socket_device:dir { add_name write };
+
+allow oeminfo_nvm oeminfo_device:dir { add_name create setattr write search remove_name };
+allow oeminfo_nvm oeminfo_device:file { create open setattr write read getattr unlink };
+allow oeminfo_nvm oeminfo_socket:sock_file { create setattr write };
+
+allow oeminfo_nvm device:dir { write add_name };
+allow oeminfo_nvm device:chr_file { read write open ioctl };
+
+allow oeminfo_nvm self:socket { read bind create write ioctl };
+allow oeminfo_nvm properties_device:dir { open read };
+allow oeminfo_nvm property_socket:sock_file { write };
+
+allow oeminfo_nvm proc_overcommit_memory:file { open read };
+allow oeminfo_nvm kmsg_device:chr_file { write getattr };
+
+allow oeminfo_nvm init:unix_stream_socket { connectto };
+allow oeminfo_nvm vendor_default_prop:property_service { set };
+allow oeminfo_nvm self:netlink_kobject_uevent_socket { create setopt bind read };
+allow oeminfo_nvm default_prop:file { read open getattr };
+allow oeminfo_nvm proc_cmdline:file { read open getattr };
+allow oeminfo_nvm system_file:file { read open getattr };
+allow oeminfo_nvm pmsg_device:file rw_file_perms;
+
+allowxperm oeminfo_nvm oeminfo_partition_device:blk_file ioctl { 0x1260 };
+
+r_dir_file(oeminfo_nvm, sysfs);

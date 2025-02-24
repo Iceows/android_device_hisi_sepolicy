@@ -1,2 +1,7 @@
 type fps_device, dev_type;
+
+# TEE
 type teecd_device, dev_type;
+
+# Oeminfo
+type oeminfo_partition_device, dev_type;
