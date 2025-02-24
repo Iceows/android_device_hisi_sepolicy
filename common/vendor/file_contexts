@@ -140,3 +140,6 @@
 # Hisi binaries (misc)
 /vendor/bin/blkcginit                           u:object_r:vendor_blkcginit_exec:s0
 /vendor/bin/water_check                         u:object_r:vendor_hisi_misc_exec:s0
+
+# Mali
+/dev/mali0					u:object_r:gpu_device:s0
