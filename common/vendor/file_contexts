@@ -7,6 +7,9 @@
 # Biometrics
 /vendor/bin/hw/vendor\.huawei\.hardware\.biometrics\.fingerprint@2\.1-service u:object_r:hal_fingerprint_default_exec:s0
 
+# AuthSecret HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service    u:object_r:hal_authsecret_default_exec:s0
+
 # Camera
 /vendor/bin/CameraDaemon u:object_r:hal_camera_default_exec:s0
 
